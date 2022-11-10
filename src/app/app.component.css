@@ -1,0 +1,69 @@
+
+.wrapper {
+	margin-top: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-wrapper {
+	padding: 20px;
+	background-color: hsla(0,0%,100%,.04);
+	height: 460px;
+	border-radius: 20px;
+}
+
+.content-wrapper-form {
+  padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content-wrapper-input::placeholder{
+	color: #fff;
+}
+
+.content-wrapper-label {
+	color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #3a4d68 inset;
+		-webkit-text-fill-color: #fff;
+}
+
+mat-form-field {
+	width: 400px;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+qr-code >::ng-deep canvas {
+	border-radius: 20px;
+}
+
+.download-button {
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+@media (max-width: 450px) { 
+	mat-form-field {
+		width: 250px;
+	}
+
+	.content-wrapper {
+		height: 360px;
+	}
+
+	::ng-deep canvas {
+		width: 200px !important;
+		height: 200px !important;
+	}
+	
+}
+

@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'QR_Code';
+  public title: string = 'QR_Code';
+  public value: string = '';
+  public downloadQr: string | undefined = '';
+
+  public handleInputChange(): void {
+    const canvas = document.querySelector('canvas');
+    const img = canvas?.toDataURL('image/png');
+    this.downloadQr = img;
+  }
+
+  public onDownload(): void {
+    this.value = '';
+  }  
 }
